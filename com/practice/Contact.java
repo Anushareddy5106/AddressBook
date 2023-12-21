@@ -1,6 +1,10 @@
 package com.practice;
 
+import java.util.Scanner;
+
 public class Contact {
+    private static Scanner scanner = new Scanner(System.in);
+    // UC1
 
     public String firstName;
     public String lastName;
@@ -11,7 +15,7 @@ public class Contact {
     public String phoneNumber;
     public String email;
 
-    Contact(String firstName, String lastName, String address, String city, String state, String zip,
+    public Contact(String firstName, String lastName, String address, String city, String state, String zip,
             String phoneNumber, String email) {
 
         this.firstName = firstName;
@@ -22,6 +26,23 @@ public class Contact {
         this.zip = zip;
         this.phoneNumber = phoneNumber;
         this.email = email;
+    }
+
+    public Contact() {
+        this(getInput("Enter the Firstname: "),
+                getInput("Enter the Lastname: "),
+                getInput("Enter the Address: "),
+                getInput("Enter the City: "),
+                getInput("Enter the State: "),
+                getInput("Enter the Zip: "),
+                getInput("Enter the Phonenumber: "),
+                getInput("Enter the Email: "));
+
+    }
+
+    public static String getInput(String prompt) {
+        System.out.println(prompt);
+        return scanner.nextLine();
     }
 
     public void displayContact() {
