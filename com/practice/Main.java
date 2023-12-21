@@ -37,6 +37,9 @@ public class Main {
                 case 3:
                     addressbook.edit();
                     break;
+                case 4:
+                    addressbook.delete();
+
                 default:
                     break;
 

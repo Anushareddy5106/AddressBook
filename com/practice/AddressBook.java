@@ -60,4 +60,27 @@ public class AddressBook {
 
     }
 
+    // UC4
+    public void delete() {
+        System.out.println("Enter Firstname:");
+        String firstN = scanner.nextLine();
+        System.out.println("Enter Lastname:");
+        String lastN = scanner.nextLine();
+
+        int found = 0;
+        for (int i = 0; i < contactList.size(); i++) {
+
+            if (contactList.get(i).firstName.equals(firstN) && contactList.get(i).lastName.equals(lastN)) {
+                contactList.remove(i);
+                System.out.println("** Contact deleted from the Address Book **");
+                found = 1;
+                break;
+            }
+        }
+
+        if (found == 0) {
+            System.out.println("** Contact you are trying to delete is not found **");
+        }
+
+    }
 }
