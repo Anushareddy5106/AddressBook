@@ -34,6 +34,11 @@ public class Main {
                     Contact contact = new Contact();
                     addressbook.add(contact);
                     break;
+                case 3:
+                    addressbook.edit();
+                    break;
+                default:
+                    break;
 
             }
         } while (option != 0);
