@@ -5,10 +5,12 @@ import java.util.*;
 public class AddressBook {
 
     public static Scanner scanner = new Scanner(System.in);
+    String name;
     ArrayList<Contact> contactList;
 
-    AddressBook() {
+    AddressBook(String name) {
         this.contactList = new ArrayList<Contact>();
+        this.name = name;
     }
 
     public void display() {
