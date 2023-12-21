@@ -29,6 +29,12 @@ public class Main {
                 case 1:
                     addressbook.display();
                     break;
+                case 2:
+                    System.out.println("--Enter the details to add the contact to AddressBook--");
+                    Contact contact = new Contact();
+                    addressbook.add(contact);
+                    break;
+
             }
         } while (option != 0);
     }

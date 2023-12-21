@@ -24,4 +24,11 @@ public class AddressBook {
         }
     }
 
+    // UC2
+
+    public void add(Contact contact) {
+        contactList.add(contact);
+        System.out.println("** Contact is added to  the Address Book **");
+    }
+
 }
