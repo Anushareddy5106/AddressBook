@@ -57,4 +57,20 @@ public class Contact {
         System.out.println("Email: " + this.email);
 
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public String getCity() {
+        return city;
+    }
 }

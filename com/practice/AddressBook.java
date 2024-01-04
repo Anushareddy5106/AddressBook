@@ -31,6 +31,17 @@ public class AddressBook {
     public void add(Contact contact) {
         contactList.add(contact);
         System.out.println("** Contact is added to  the Address Book **");
+
+    }
+
+    // UC7
+    public boolean isDuplicateName(String firstName) {
+        for (Contact contact : contactList) {
+            if (contact.firstName.equals(firstName)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     // UC3
@@ -85,4 +96,5 @@ public class AddressBook {
         }
 
     }
+
 }
